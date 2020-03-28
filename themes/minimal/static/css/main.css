@@ -24,17 +24,28 @@ img {
 
 .intro {
     transform: translateY(22vh);
+    max
 }
 
 .intro > h1 {
     color: #212121;
     font-size: 12vw;
+    font-weight: 100;
 }
 
 .intro > h2 {
     color: #757575;
     font-size: 3vmin;
 }
+
+
+@media (min-width: 1024px) {
+  /* STOPGAP */
+  .intro > h1 {
+    font-size: 123px;;
+  }
+}
+
 
 /* Page content */
 
