@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OOP-α: A Critical View on OOP</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: #0074D9;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jaqmol.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.67.1" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">OOP-α: A Critical View on OOP</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/jaqmol/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/username/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>OOP-α: A Critical View on OOP</h2>
+        <h5></h5>
+        
+
+    </div>
+
+    <div align="start" class="content"><h1 id="a-critical-view-on-object-oriented-programming">A critical view on object oriented programming</h1>
+<p>According to official history object orientation started in the late 1950th, early 1960 as a set of ideas, preset to define the way programming has to be done. What many don&rsquo;t care to learn is the fact that the understanding what OOP means changed during the end of the 80th up until the early 2000th. Only now the mainstream begins to find some interest in the beginnings.</p>
+<p>Like most of the things that define the modern age of technology, OOP was the brain child of a set of researchers from Xerox&rsquo;s Paolo Alto Research Center (PARC). Just to name a few:</p>
+<ul>
+<li>Butler W. Lampson (Turing Award)</li>
+<li>Alan Kay (Turing Award)</li>
+<li>Charles P. Thacker (Turing Award)</li>
+<li>Mark Weiser (Ubiquitous Computing)</li>
+<li>Lynn Conway (VLSI)</li>
+<li>Adele Goldberg (Smalltalk)</li>
+<li>Neil J. Gunther (PARCbench)</li>
+<li>Daniel P. Huttenlocher (JBIG2)</li>
+<li>Butler Lampson (Alto, laser printer, Ethernet, Bravo, Mesa)</li>
+<li>Calvin Quate</li>
+<li>Eric Schmidt</li>
+<li>Charles Simonyi (Bravo)</li>
+<li>Charles P. Thacker (Alto, Ethernet, laser printer)</li>
+</ul>
+<p>The list already mentions a couple of the technologies developed at PARC, and there&rsquo;s more:</p>
+<ul>
+<li>Many programming languages, including BCPL, LISP, Smalltalk , Mesa, and Poplar</li>
+<li>Bravo and Gypsy — the first WYSIWYG word processors</li>
+<li>Laurel, later Hardy — Network E-mail clients</li>
+<li>Markup and Draw—Painting and graphics manipulation (bitmap editors)</li>
+<li>Neptune — A file manager</li>
+<li>The first FTP and chat utilities</li>
+<li>A couple of games — Chess, Pinball, Othello and a Alto Trek game by Gene Ball</li>
+<li>Sil — A vector graphics editor, used mainly for logic circuits, printed circuit</li>
+<li>Officetalk — An experimental forms-processing system</li>
+</ul>
+<p>The sheer amount of innovations produced at PARC is breathtaking. Most of which formed the basis for the technological development that came afterwards. Strangely without being monetized by Xeroc itself, but by other companies and people that got inspired by the geniuses at PARC. Why Xerox wasn&rsquo;t capable of profiting from the intellectual value it generated is another questions.</p>
+<p>Adele Goldberg, Alan Kay and their team where the first people that actually designed the first big systems around the notion of object orientation during the 1970th. What that means is that they actually got their hands dirty in programming in object oriented style. They produced parsers, libraries, frameworks, virtual machines, garbage collectors, GUIs and programming environments. And they went through the complete software life cycle with all of it. So their experiences covered the whole spectrum of trial, error and making it better the second time.</p>
+<h2 id="the-building-blocks-of-a-programming-system">The building blocks of a programming system</h2>
+<p>During the 1950th and 1960th it became more and more clear that a programming language alone is not enough. A complete set of &ldquo;tools and materials&rdquo; is required to form a productive system that can be used to design software effectively. Namely:</p>
+<ul>
+<li>A programming language</li>
+<li>Compiler, interpreters and/or just-in-time compilers</li>
+<li>Runtime environments like virtual machines</li>
+<li>Memory management systems: reference counting or garbage collectors</li>
+<li>An extensive library of expert-designed modules called a class library</li>
+</ul>
+<p>During the 1970th we can observe a co-evolution of Smalltalk and Lisp based systems co-inspiring each other. Both developing their own object systems, composed of all of the above mentioned building blocks. The people involved in software development during this time all experienced what it meant to prototype, maintain and extend big systems in object-oriented fashion. As early as the 1970th and early 80th. And what is kind of a surprise:</p>
+<p><strong>They where wildly misunderstood and ignored, for decades to come! No-one cared to learn from them.</strong></p>
+<h2 id="alan-kay-disapproves-of-what-became-of-oop">Alan Kay disapproves of what became of OOP</h2>
+<p>It&rsquo;s not a secret that the person who coined the term OOP - Alan Kay - is not very happy about the concepts that over time happened to become associated with it.</p>
+<h3 id="nowadays-oop-means">Nowadays OOP means:</h3>
+<ul>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+<li>Encapsulation</li>
+</ul>
+<p>Whereas Alan Kay had the following concepts in mind:</p>
+<blockquote>
+<ul>
+<li>I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages (so messaging came at the very beginning &ndash; it took a while to see how to do messaging in a programming language efficiently enough to be useful).</li>
+<li>I wanted to get rid of data. The B5000 almost did this via its almost unbelievable HW architecture. I realized that the cell/whole-computer metaphor would get rid of data, and that &ldquo;&lt;-&rdquo; would be just another message token (it took me quite a while to think this out because I really thought of all these symbols as names for functions and procedures.</li>
+<li>My math background made me realize that each object could have several algebras associated with it, and there could be families of these, and that these would be very very useful. The term &ldquo;polymorphism&rdquo; was imposed much later (I think by Peter Wegner) and it isn&rsquo;t quite valid, since it really comes from the nomenclature of functions, and I wanted quite a bit more than functions. I made up a term &ldquo;genericity&rdquo; for dealing with generic behaviors in a quasi-algebraic form.</li>
+<li>I didn&rsquo;t like the way Simula I or Simula 67 did inheritance (though I thought Nygaard and Dahl were just tremendous thinkers and designers). So I decided to leave out inheritance as a built-in feature until I understood it better.</li>
+</ul>
+<p>Alan Kay in a response to a question from Stefan Ram <a href="https://www.quora.com/What-does-Alan-Kay-consider-as-real-OOP">Source: Re: Clarification of &ldquo;object-oriented&rdquo;</a></p>
+</blockquote>
+<p>So what he actually had in mind is something more in the direction of:</p>
+<p>Designing software around <strong>decoupled subsystems</strong> that <strong>communicate via messages,</strong> are <strong>designed around behaviors</strong> and keep repetition low by using techniques that allow for <strong>generic expression of behavior.</strong></p>
+<h2 id="what-kind-of-thing-is-oop">What kind of thing is OOP?</h2>
+<p>Looking at OOP from great distance, actually what I see is a hand full of ordering principles. Some of the things that seem fundamentals are just arbitrary names for nice wrapping paper to roll up algorithms and variables. The aspects Alan Kay emphasizes don&rsquo;t look like much at first glance,, but like every skilled software engineer might be willing to admit: they come closer to what is actually important to produce reliable software.</p>
+<h2 id="why-did-the-meaning-of-oop-change">Why did the meaning of OOP change?</h2>
+<p>There are many different opinions about the reason behind the change of meaning. Some people argue that Alan Kay&rsquo;s definition just wasn&rsquo;t what the market actually required, so it got replaced by something else. I don&rsquo;t agree with this opinion. I believe it was due to the following:</p>
+<p>Before the 70th computerization in businesses and corporations wasn&rsquo;t very high. During the 80th the corporate world suddenly began to grasp the potential of the technology and began to adopt it. Without caring at all about the opinions of the geniuses of the field. At the same time the micro-computer revolution happened and the market was flooded with cheap and underpowered computer hardware. While it&rsquo;s true, that only the price drop of this new cheap hardware made the broad adoption possible, it also caused a complete and utter setback in what was possible programming-wise. So that the tools required where mainly designed along the requirement to get the most out of underpowered hardware. This canalized the choice of tools for the decades to come.</p>
+<p>Instead of Lisp and Smalltalk lower-level languages like COBOL, C and Pascal where needed to get acceptable performance out of the CPUs of low-cost-systems. Later the evolution of object-orientation for those languages and environments continued on its own terms from this low-cost-base on. Many languages and frameworks needed to walk the extra mile: They needed to make their own wrong decisions and learn from their own errors. But under completely different circumstances.</p>
+<p>The field in which the evolution of programming languages and frameworks took place was not defined by expert computer science researchers at the top of their field anymore, but by the requirements of cost effectiveness and stakeholder value. So due to cost pressures (barely good enough is enough to make a profit) investments needed to hold for longer, errors where admitted later (or not at all), learning effects took hold slower.</p>
+<p>This is the first article in a series where I want to give a closer look to the aspects of object-orientation and what the big 3 concepts actually mean and that they&rsquo;re not cut in stone. Knowing how to replace them and why can help making smarter decisions in the field.</p>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a>.</p>
+        </footer>
+
+        
+
+
+    </body>
+
+</html>
+
