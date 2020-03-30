@@ -131,9 +131,8 @@
 
     </div>
 
-    <div align="start" class="content"><h1 id="a-critical-view-on-object-oriented-programming">A critical view on object oriented programming</h1>
-<p>According to official history object orientation started in the late 1950th, early 1960 as a set of ideas, preset to define the way programming has to be done. What many don&rsquo;t care to learn is the fact that the understanding what OOP means changed during the end of the 80th up until the early 2000th. Only now the mainstream begins to find some interest in the beginnings.</p>
-<p>Like most of the things that define the modern age of technology, OOP was the brain child of a set of researchers from Xerox&rsquo;s Paolo Alto Research Center (PARC). Just to name a few:</p>
+    <div align="start" class="content"><h1 id="a-critical-view-on-object-oriented-software-design">A critical view on object oriented software design</h1>
+<p>Imagine there had been a couple of people, somewhere buried in the past, that basically invented the complete foundation technologies for everything that continues to shape our reality and will continue to do so for the foreseeable future. Sounds like a cheesy creation myth? But it&rsquo;s not; it&rsquo;s actually what happened at Xerox PARC starting in the 1970th. Here&rsquo;s a list of some of the notable names from the early days of PARC:</p>
 <ul>
 <li>Butler W. Lampson (Turing Award)</li>
 <li>Alan Kay (Turing Award)</li>
@@ -149,40 +148,43 @@
 <li>Charles Simonyi (Bravo)</li>
 <li>Charles P. Thacker (Alto, Ethernet, laser printer)</li>
 </ul>
-<p>The list already mentions a couple of the technologies developed at PARC, and there&rsquo;s more:</p>
+<p>This are the actual people behind our modern technologies. :</p>
 <ul>
-<li>Many programming languages, including BCPL, LISP, Smalltalk , Mesa, and Poplar</li>
-<li>Bravo and Gypsy — the first WYSIWYG word processors</li>
-<li>Laurel, later Hardy — Network E-mail clients</li>
-<li>Markup and Draw—Painting and graphics manipulation (bitmap editors)</li>
-<li>Neptune — A file manager</li>
+<li>The Xerox Alto and 10 years later the Xerox Star, the first computer systems with graphical user interfaces</li>
+<li>Ethernet networking</li>
+<li>The first integrated programming environments &ndash; BCPL, LISP, Smalltalk , Mesa, and Poplar</li>
+<li>Bravo and Gypsy &ndash; the first WYSIWYG word processors that inspired Microsoft™ Word™</li>
+<li>Laurel, later Hardy &ndash; probably the networked E-mail clients</li>
+<li>Markup and Draw—Painting and graphics manipulation (graphical bitmap editors)</li>
+<li>Neptune — A graphical file manager</li>
 <li>The first FTP and chat utilities</li>
 <li>A couple of games — Chess, Pinball, Othello and a Alto Trek game by Gene Ball</li>
-<li>Sil — A vector graphics editor, used mainly for logic circuits, printed circuit</li>
+<li>Sil — A graphical vector graphics editor, used mainly for logic circuits, printed circuit</li>
 <li>Officetalk — An experimental forms-processing system</li>
 </ul>
-<p>The sheer amount of innovations produced at PARC is breathtaking. Most of which formed the basis for the technological development that came afterwards. Strangely without being monetized by Xeroc itself, but by other companies and people that got inspired by the geniuses at PARC. Why Xerox wasn&rsquo;t capable of profiting from the intellectual value it generated is another questions.</p>
-<p>Adele Goldberg, Alan Kay and their team where the first people that actually designed the first big systems around the notion of object orientation during the 1970th. What that means is that they actually got their hands dirty in programming in object oriented style. They produced parsers, libraries, frameworks, virtual machines, garbage collectors, GUIs and programming environments. And they went through the complete software life cycle with all of it. So their experiences covered the whole spectrum of trial, error and making it better the second time.</p>
+<p>The sheer amount of innovations produced at PARC is breathtaking. Most of which formed the basis for the technological development that came afterwards. People like Steve Jobs and many Microsoft Managers harvested a whole life of business success from a couple of inspiring visits at PARC.</p>
+<p>Adele Goldberg, Alan Kay, L. Peter Deutsch, Ronald Kaplan, Warren Teitelman, Dan Ingalls and Diana Merry where among the first people that took it to themselves to design a complete integrated development environments. What that means is that &ndash; for the first time &ndash; people actually got their hands dirty in programming in an object oriented way. They produced the full stack of tools required to do that.</p>
 <h2 id="the-building-blocks-of-a-programming-system">The building blocks of a programming system</h2>
-<p>During the 1950th and 1960th it became more and more clear that a programming language alone is not enough. A complete set of &ldquo;tools and materials&rdquo; is required to form a productive system that can be used to design software effectively. Namely:</p>
 <ul>
-<li>A programming language</li>
-<li>Compiler, interpreters and/or just-in-time compilers</li>
+<li>One of the first OO programming languages</li>
+<li>Compilers, interpreters, just-in-time compilers</li>
 <li>Runtime environments like virtual machines</li>
-<li>Memory management systems: reference counting or garbage collectors</li>
-<li>An extensive library of expert-designed modules called a class library</li>
+<li>Memory management and garbage collectors</li>
+<li>High performance graphics systems (bit blit based back then)</li>
+<li>And not forget: extensive libraries of expert-designed modules, that we now call class libraries</li>
 </ul>
-<p>During the 1970th we can observe a co-evolution of Smalltalk and Lisp based systems co-inspiring each other. Both developing their own object systems, composed of all of the above mentioned building blocks. The people involved in software development during this time all experienced what it meant to prototype, maintain and extend big systems in object-oriented fashion. As early as the 1970th and early 80th. And what is kind of a surprise:</p>
+<p>And they went through the complete software life cycle with all of it. So their experiences covered the whole spectrum of trial, error and making it better the second time.</p>
+<p>Al of this happened during the 1970th and 1980th, when we can observe a co-evolution of Smalltalk and Lisp based systems. On could they both areas co-inspired each other. Both developed their object systems with extensive class libraries, composed of all of the above mentioned building blocks. The people involved in software development during this time all experienced what it meant to prototype, maintain and extend big systems in object-oriented fashion. As early as the 1970th and early 80th. And what is kind of a surprise:</p>
 <p><strong>They where wildly misunderstood and ignored, for decades to come! No-one cared to learn from them.</strong></p>
-<h2 id="alan-kay-disapproves-of-what-became-of-oop">Alan Kay disapproves of what became of OOP</h2>
-<p>It&rsquo;s not a secret that the person who coined the term OOP - Alan Kay - is not very happy about the concepts that over time happened to become associated with it.</p>
-<h3 id="nowadays-oop-means">Nowadays OOP means:</h3>
+<h2 id="alan-kay-disapproves-of-what-became-of-object-orientation">Alan Kay disapproves of what became of object orientation</h2>
+<p>It&rsquo;s not a secret that the person who coined the term OO - Alan Kay - is not very happy about the concepts that over time happened to become associated with it.</p>
+<h3 id="nowadays-object-orientation-means">Nowadays object orientation means:</h3>
 <ul>
 <li>Inheritance</li>
 <li>Polymorphism</li>
 <li>Encapsulation</li>
 </ul>
-<p>Whereas Alan Kay had the following concepts in mind:</p>
+<p>Whereas Alan Kay had the following principles in mind:</p>
 <blockquote>
 <ul>
 <li>I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages (so messaging came at the very beginning &ndash; it took a while to see how to do messaging in a programming language efficiently enough to be useful).</li>
@@ -192,16 +194,15 @@
 </ul>
 <p>Alan Kay in a response to a question from Stefan Ram <a href="https://www.quora.com/What-does-Alan-Kay-consider-as-real-OOP">Source: Re: Clarification of &ldquo;object-oriented&rdquo;</a></p>
 </blockquote>
-<p>So what he actually meant is something along the lines of:</p>
+<p>So what he actually meant are software design principles that actually help with simplifying program code and making it better understandable:</p>
 <p>Designing software around <strong>decoupled subsystems</strong> that <strong>communicate via messages,</strong> are <strong>designed around behaviors</strong> and keep repetition low by using techniques that allow for <strong>generic expression of behavior.</strong></p>
-<h2 id="what-kind-of-thing-is-oop">What kind of thing is OOP?</h2>
-<p>Looking at OOP from great distance, actually what I see is a hand full of ordering principles. Some of the things that seem fundamentals are kind of arbitrary decisions in the realm of &ldquo;nice wrapping paper to roll up algorithms and variables.&rdquo; The aspects Alan Kay emphasizes on the other hand (even if they don&rsquo;t look like much at first glance), come closer to what is actually important to produce reliable software. Every skilled software engineer admits that, if he&rsquo;s willing to lay down the grandeur that comes with the big words.</p>
-<h2 id="why-did-the-meaning-of-oop-change">Why did the meaning of OOP change?</h2>
-<p>There are many different opinions about the reason behind the change of meaning. Some people argue that Alan Kay&rsquo;s definition just wasn&rsquo;t what the market actually required, so it got replaced by something else. I don&rsquo;t agree with this opinion. I believe it was due to the following:</p>
-<p>Before the 70th computerization in businesses and corporations wasn&rsquo;t very high. During the 80th the corporate world suddenly began to grasp the potential of the technology and began to adopt it. Without caring at all about the opinions of the geniuses of the field. At the same time the micro-computer revolution happened and the market was flooded with cheap and underpowered computer hardware. While it&rsquo;s true, that only the price drop of this new cheap hardware made the broad adoption possible, it also caused a complete and utter setback in what was possible programming-wise. So that the tools required where mainly designed along the requirement to get the most out of underpowered hardware. This canalized the choice of tools for the decades to come.</p>
-<p>Instead of Lisp and Smalltalk lower-level languages like COBOL, C and Pascal where needed to get acceptable performance out of the CPUs of low-cost-systems. Later the evolution of object-orientation for those languages and environments continued on its own terms from this low-cost-base on. Many languages and frameworks needed to walk the extra mile: They needed to make their own wrong decisions and learn from their own errors. But under completely different circumstances.</p>
-<p>The field in which the evolution of programming languages and frameworks took place was not defined by expert computer science researchers at the top of their field anymore, but by the requirements of cost effectiveness and stakeholder value. So due to cost pressures (barely good enough is enough to make a profit) investments needed to hold for longer, errors where admitted later (or not at all), learning effects took hold slower.</p>
-<p>This is the first article in a series where I want to give a closer look to the aspects of object-orientation and what the big 3 concepts actually mean and that they&rsquo;re not cut in stone. Knowing how to replace them and why can help making smarter decisions in the field.</p>
+<h3 id="so-what-kind-of-thing-is-this-object-orientation-actually">So what kind of thing is this &ldquo;object-orientation&rdquo; actually?</h3>
+<p>If one looks at what object-orientation achieves at the end of the day, one could say that it&rsquo;s a &ldquo;nice wrapping paper to roll up algorithms and variables.&rdquo; It&rsquo;s a set of <strong>ordering and design principles for program behavior to help reduce complexity.</strong> The aspects Alan Kay emphasizes might not look like much at first glance, but they get close to what is quite important to produce maintainable and reliable software. Something that the concepts &ldquo;inheritance&rdquo; and the 1990th-style of &ldquo;polymorphism&rdquo; we find in C++ and Java, somehow fail to improve in a meaningful way.</p>
+<h2 id="why-did-the-meaning-of-oo-change">Why did the meaning of OO change?</h2>
+<p>There are many different opinions about the reasons behind this change. Some people argue that Alan Kay&rsquo;s definition just wasn&rsquo;t what the market actually required, so it got replaced by something else. I don&rsquo;t agree with this and tend more towards the following.</p>
+<p>Before the 70th computerization in businesses and corporations wasn&rsquo;t very high. During the 80th the corporate world suddenly began to grasp the potential of the technology and began to adopt it. Without caring at all about the opinions of the geniuses of the field. At the same time the micro-computer revolution happened and the market was flooded with cheap and underpowered computer hardware. While it&rsquo;s true, that only the price drop made the broad adoption possible, it also caused a complete and utter setback in what was possible programming-wise. So that the tools required where mainly chosen for their capability to perform well on underpowered hardware. This canalized the choice of tools for the decades to come.</p>
+<p>Instead of Lisp and Smalltalk lower-level languages like COBOL, C and Pascal where needed to get acceptable performance out of the CPUs of low-cost-systems. Later the evolution of object-orientation for this environments continued on its own terms. And it seems: Not driven by the expert computer science researchers at the top of their field anymore, but by the requirements of cost effectiveness and stakeholder value. Strangely some of the seemingly big concepts developed over the years don&rsquo;t seem to add anything anymore to the <strong>ordering and design principles for program behavior to help reduce complexity.</strong> Instead they seem to wallow in the mire of self-induced complications. The field of object oriented software design seems contain some things that are mostly unnecessary when measured for their capability to add to maintainability, reliable and simplicity.</p>
+<p>This is the first article in a series where I want to have a closer look at the aspects of object-orientation and what the big 3 concepts actually mean and that they&rsquo;re not cut in stone. Knowing how to replace them and why can help making smarter decisions in the field.</p>
 </div>
 
 </main>
