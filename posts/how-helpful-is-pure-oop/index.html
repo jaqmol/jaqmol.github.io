@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>How helpful is pure OOP?</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: #0074D9;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jaqmol.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.67.1" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">How helpful is pure OOP?</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/jaqmol/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/username/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>How helpful is pure OOP?</h2>
+        <h5></h5>
+        
+
+    </div>
+
+    <div align="start" class="content"><h2 id="re-evaluating-core-oop-concepts">Re-evaluating core OOP concepts</h2>
+<p>If we want to be open and have a critical look at OOP we have to first define the core values that actually matter to keep up implementation effectiveness, maintainability, extendability and code reuse. Why should we care about implementation effectiveness, maintainability, extendability and code reuse? Because if we score badly in this fields, our software will inevitably be more expensive (time-wise and money-wise) to write, maintain and extend.</p>
+<h1 id="core-values-concerning-architecture-design-and-programming">Core values concerning architecture, design and programming</h1>
+<h4 id="3-values-model">3-VALUES MODEL</h4>
+<ol>
+<li><strong>Expressive problem solving</strong></li>
+<li><strong>Simplicity of abstractions</strong></li>
+<li><strong>Easy reasoning about code</strong></li>
+</ol>
+<p><strong>Why should we care about no. 1 &ldquo;Expressive problem solving&rdquo;?</strong> Expressive means &ldquo;effectively conveying a specified quality or idea&rdquo;. So this goes down to the fundamentals of programming: turning ideas into something that can be understood by a computer for the purpose of solving a real world problem.</p>
+<p><strong>Why should we care about no. 2 &ldquo;Simplicity of abstractions&rdquo;?</strong> Abstraction is the way of dealing with something that only exists as an idea. This too goes down to the fundamentals of programming. It&rsquo;s about the &ldquo;how&rdquo; in which ideas are dealt with and that this how should be guided by the goal of simplicity.</p>
+<p><strong>Why should we care about no. 3 &ldquo;Easy reasoning about code&rdquo;?</strong> Because without the capability to reason easily about code, we could not convey the idea of the problem solution effectively and we did not deal appropriately with this idea. We did not go strongly enough in the direction of pursuit for simplicity.</p>
+<h4 id="1-value-model">1-VALUE MODEL</h4>
+<ul>
+<li><strong>Pursuing simplicity</strong></li>
+</ul>
+<p>Lets have a look how the core concepts of OOP perform in the light of simplicity.</p>
+<h2 id="foundation">Foundation</h2>
+<p>The foundation for any kind of programming are variables (names that can hold values) and functions (expressions that do something with those variables), also called procedures. Additionally many programming systems support some kind of module system from the start, or one was added later on.</p>
+<h2 id="classes-and-objectsinstances">Classes and objects/instances</h2>
+<p>Classes are the fundamental building block in object oriented programming. A class is a way to merge variables and functions together into a unit. This unit can then be handled as one and be expressed as a variable somewhere else. Also one can produce many different of a kind, which are then called objects or instances. The production process is called instantiation.</p>
+<h2 id="encapsulation">Encapsulation</h2>
+<p>Based on classes and objects, encapsulation gives us guidelines about how to merge variables and functions. Only functions and variables that belong together should be merged this way. In fact it&rsquo;s a constant cause for controversy among software architects and programmers as to how exactly this is performed. Usually most of the solutions are arbitrary.</p>
+<h2 id="composition-inheritance-and-delegation">Composition, <strong>inheritance,</strong> and delegation</h2>
+<p>The concept &ldquo;inheritance&rdquo; especially has an interesting past. In the beginning of Java it was celebrated as the most important concept for code organization and software architecture. It&rsquo;s used to distribute &ldquo;traits&rdquo; of a &ldquo;family&rdquo; of classes and objects over several &ldquo;generations&rdquo;, so that a complex hierarchy of &ldquo;things&rdquo; is created. A so called type hierarchy. The time spent for building such things had been greatly exaggerated over the last decades, especially when measured by the value added at the end of the day.</p>
+<p>The two other related concepts composition and delegation where not originally counted as object oriented virtues. They actually come from somewhere completely different. They where adapted by the object oriented community to address the problems caused by trying to use inheritance for everything.</p>
+<h2 id="polymorphism">Polymorphism</h2>
+<p>Also called subtyping in times when inheritance was still celebrated. It basically means that different types can implement the same functions so that they can be handled in the same way. One of the examples that is given quite often is a drawing system in which circles and rectangles both have a &ldquo;draw&rdquo; function (also called method), so that both can be handled the same way by the drawing system. One could rephrase as: both being handled as something &ldquo;drawable&rdquo;.</p>
+<p>Polymorphism/subtyping and inheritance both are questionable concepts. Inheritance especially did cause more harm than good in the pursuit of simplicity. Thankfully they are not a necessity and can easily be prevented.</p>
+<h2 id="the-oop-mental-model">The OOP mental model</h2>
+<p>Object orientation represents a mental model and was considered the one and only &ldquo;serious programming&rdquo; up until recently. While the thing doesn&rsquo;t appear to be too complex from a distance, it convolutes the problem space quite quickly with unnecessary complexity. Some programming environments (like Java did) and many organizational programming guidelines are still enforce this mental model.</p>
+<p>That means that every problem needs to be expressed as classes and objects. Every single one of them. And that&rsquo;s where the concepts really falls apart, because this enforcement completely denies the nature of computation:</p>
+<h3 id="the-nature-of-computation">The nature of computation</h3>
+<ol>
+<li>To transform data between representations and in the form of algorithms.</li>
+<li>To express data appropriately so that transformations can be applied to it.</li>
+</ol>
+<p>Let&rsquo;s remember the goal of Alan Kay:</p>
+<blockquote>
+<ul>
+<li>I wanted to get rid of data. The B5000 almost did this via its almost unbelievable HW architecture. I realized that the cell/whole-computer metaphor would get rid of data, and that &ldquo;&lt;-&rdquo; would be just another message token (it took me quite a while to think this out because I really thought of all these symbols as names for functions and procedures.</li>
+</ul>
+<p>Alan Kay in a response to a question from Stefan Ram <a href="https://www.quora.com/What-does-Alan-Kay-consider-as-real-OOP">Source: Re: Clarification of &ldquo;object-oriented&rdquo;</a></p>
+</blockquote>
+<p>To get rid of data was the honorable goal. What classes and objects actually turned out to be used for mainly, was to construct aforementioned data type hierarchies. Those turn the problem that needs to be solved into a tree of different interdependent and extremely abstract data types. So instead of getting rid of data, classes and objects turn everything into a problem of hierarchically structuring data.</p>
+<p>What is actually required is the transformation of data and the appropriate representation of data to effectively apply those transformations. Classes and objects enforce a mental model in data tends to be analyzed to press it into a hierarchy, mostly unnecessarily. The goal of the exercise, the transformation, is taking a back seat while doing so.</p>
+<p>This path astray is further intensified by one aspect of this mental model which is called <a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">&ldquo;The kingdom of nouns&rdquo;</a>. It encourages to think about the problem by objectifying everything.</p>
+<p>Being forced to skew the solution finding process by building over-complicated data hierarchies and objectifying everything, does not make it more expressive. It actually encumbers transformation-focused reasoning about the problem.</p>
+<h2 id="software-design-patterns">Software design patterns</h2>
+<p>Programmers that used object orientation over time experienced repeating patterns occurring. Abstract combinations of classes and objects to solve similar technical problems. Here&rsquo;s a list of some of them:</p>
+<ul>
+<li>Adapter, Wrapper, or Translator</li>
+<li>Bridge</li>
+<li>Composite</li>
+<li>Decorator</li>
+<li>Extension object</li>
+<li>Facade</li>
+<li>Flyweight</li>
+<li>Front controller</li>
+<li>Marker</li>
+<li>Module</li>
+<li>Proxy</li>
+<li>Twin</li>
+<li>Chain of responsibility</li>
+<li>Command</li>
+<li>Interpreter</li>
+<li>Iterator</li>
+<li>Mediator</li>
+<li>Memento</li>
+<li>Null object</li>
+<li>Observer or Publish/subscribe</li>
+<li>Servant</li>
+<li>Specification</li>
+<li>State</li>
+<li>Strategy</li>
+<li>Template method</li>
+<li>Visitor</li>
+</ul>
+<p>Many of this patterns are absolutely necessary. But the problem they solve only occurs because the problem is reasoned about in the object oriented mental model. Additionally the added complexity that comes with this design patterns should not stay unmentioned. It&rsquo;s quite considerable and something that every software that was build in an object oriented way is suffering from. Especially when it comes to maintainability.</p>
+<p>Pure object orientation therefore turned out to be a factor for considerable over-complication of software systems, proven countless times over the last decades. Many of this problems just go away if object orientation as a hard design goal is given up. With the staggering side effect of reducing overall complexity considerably. In the next article I want to show which kind of concepts can be used to actively invest in simplicity by not doing things the object oriented way.</p>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a>.</p>
+        </footer>
+
+        
+
+
+    </body>
+
+</html>
+
