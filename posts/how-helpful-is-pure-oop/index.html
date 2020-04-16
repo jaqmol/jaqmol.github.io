@@ -176,7 +176,7 @@
 <p>Alan Kay in a response to a question from Stefan Ram <a href="https://www.quora.com/What-does-Alan-Kay-consider-as-real-OOP">Source: Re: Clarification of &ldquo;object-oriented&rdquo;</a></p>
 </blockquote>
 <p>To get rid of data was the honorable goal. What classes and objects actually turned out to be used for mainly, was to construct aforementioned data type hierarchies. Those turn the problem that needs to be solved into a tree of different interdependent and extremely abstract data types. So instead of getting rid of data, classes and objects turn everything into a problem of hierarchically structuring data.</p>
-<p>What is actually required is the transformation of data and the appropriate representation of data to effectively apply those transformations. Inheritance enforces a mental model where most of the time is spent pressing data into arbitrary hierarchies, merging the data with applicable transformations. But what about the transformation results? The notion of a process that has a clearly designed beginning state and a clearly designed end state, not to mention preliminary states in between, often causes an explosion of required effort. The whole mental model causes a huge overhead of mental exercise that is completely unnecessary to solve the inherent technical problems of data transformation. For practitioners of object orientation and especially inheritance, what should be the main concern is taking a back seat.</p>
+<p>What is actually required is the transformation of data and the appropriate representation of data to effectively apply those transformations. Inheritance enforces a mental model where most of the time is spent pressing data into arbitrary hierarchies, merging the data with applicable transformations. But what about the transformation results? The notion of a process that has a clearly designed beginning state and a clearly designed end state, not to mention preliminary states in between, often causes an explosion of required effort. The whole mental model causes a huge overhead of mental exercise that is completely unnecessary to solve the inherent technical problems of data transformation. For practitioners of object orientation and especially inheritance, what should be the main concern is actually taking a back seat.</p>
 <p>This path astray is further intensified by one aspect of this mental model which is called <a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">&ldquo;The kingdom of nouns&rdquo;</a>. It encourages to think about the problem by objectifying everything.</p>
 <p><strong>Being forced to skew the solution finding process by building over-complicated data hierarchies and objectifying everything, does not make it more expressive. It actually encumbers transformation-focused reasoning about the problem.</strong></p>
 <h2 id="software-design-patterns">Software design patterns</h2>
@@ -210,7 +210,16 @@
 <li>Visitor</li>
 </ul>
 <p>Many of this patterns are only necessary because the problem is reasoned about in the object oriented mental model. Once again considerable added complexity caused by thinking in object oriented fashion. Especially when it comes to maintainability, object orientation cannot deliver on his promises.</p>
-<p>Pure object orientation therefore turned out to be a factor for considerable over-complication of software systems, proven countless times over the last decades. Many of this problems just go away if object orientation as a hard design goal is given up. With the staggering side effect of reducing overall complexity considerably. In the next article I want to show which kind of concepts can be used to actively invest in simplicity by not doing things in an overly object oriented way.</p>
+<h2 id="where-is-the-evidence">Where is the evidence?</h2>
+<p>Let&rsquo;s revisit our initially mentioned core values:</p>
+<ol>
+<li><strong>Expressive problem solving</strong></li>
+<li><strong>Simplicity of abstractions</strong></li>
+<li><strong>Easy reasoning about code</strong></li>
+</ol>
+<p>There has never been evidence that object orientation adds something in those fields in comparison to the alternatives. Pure object orientation turned out to be a factor for over-complication of software systems, proven countless times over the last decades. In fact if object orientation as a hard design goal is given up, expressiveness of problem solving, simplicity of abstractions as well as the ease to reasoning about code raises considerable. That contrary evidence should be enough to recognize &ldquo;pure object orientation&rdquo; as what it actually became:</p>
+<p><strong>OOP IS A DOGMA</strong></p>
+<p>In the next article I want to show which kind of concepts can be used to actively invest in simplicity by not doing everything in an object oriented way.</p>
 </div>
 
 </main>
