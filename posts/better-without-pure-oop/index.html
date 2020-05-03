@@ -170,7 +170,7 @@
 <p>Due to the fact that software is about data and transformations over it, state is everywhere and can only be mitigated. Functional programming has a set of intriguing solutions all together with an adequate language to talk about this class of problems:</p>
 <h2 id="side-effects-and-purity">Side effects and purity</h2>
 <p>Instead of attempting to handle the exponential complexity of state by encapsulating problems within more state (OOP), functional programming takes a completely different road:</p>
-<p>1st functional programming identified that state is only problematic if it is mutable; this means if it can be changed. A set of constants poses no risk of raising error-probability. A set of variables does. So the question his: <strong>How can be write our programs in order to be able to treat our variables as constants,</strong> in order to prevent mutable state. <strong>This is achieved by doing as much as possible with functions only.</strong> A free-floating function that is not connected to an object and does not alter any state outside of itself has very interesting characteristics:</p>
+<p>Functional programming identified that state is only problematic if it is mutable; this means: if variables can be changed. A set of constants poses no risk of raising error-probability. A set of variables does. So the question his: <strong>How can we program to be able to treat our variables as constants?</strong> Simply by <strong>doing as much as possible with functions only.</strong> A free-floating function that is not connected to an object and does not mutate variables outside of itself has very interesting characteristics:</p>
 <ul>
 <li>It&rsquo;s behaving 100% predictable: given the same input it will always produce the same output (same arguments -&gt; same return value).</li>
 <li>It&rsquo;s 100% safe: it will not mutate anything outside of it&rsquo;s scope.</li>
@@ -187,10 +187,9 @@
 <li><strong>&hellip; are extremely easy to reason about</strong></li>
 </ol>
 <p>If a function does more than transforming a given input into an output, it&rsquo;s not considered pure anymore. A setter-method on an object for instance is not pure, because it changes the state of the object. Such a function is considered as having one or more side-effects. When called a second time with the same arguments, the outcome of this call might be completely different. This kind of code is therefore less predictable than a pure function. Code not written as pure functions poses the risk of raising error-probability.</p>
-<p>IT IS ABSOLUTELY POSSIBLE TO WRITE THE MAJOR PART OF THE CODE OF AN APPLICATION AS PURE FUNCTIONS.</p>
 <h3 id="side-effects-are-always-the-outcome">Side-effects are always the outcome</h3>
 <p>Computing is all about data and the transformation of data. One could express this as a stream of transformations that can be expressed perfectly in a functional paradigm. But in order to actually do something with the results, side-effects are absolutely necessary. If the result of a computation is displayed to a screen, send over the network or written to a hard drive, this is always a side-effect.</p>
-<p>This fact can easily be misunderstand as a weakness of functional programming. In fact the object oriented community tapped into this trap: If side-effects are the most important thing, let&rsquo;s program everything as side-effect. Programming with setters and getters is exactly this: Programming by side-effects.</p>
+<p>This fact can easily be misunderstood as a weakness of functional programming. In fact the object oriented community tapped into this trap: If side-effects are the most important thing, let&rsquo;s program everything as side-effect. Programming with setters and getters is exactly this: Programming by side-effects.</p>
 <p>But are side-effects really the most important thing? I&rsquo;d argue: Most definitely not! The most important aspect in programming is to keep the major part of the code:</p>
 <ol>
 <li><strong>Expressive in the way it solves problems</strong></li>
@@ -199,12 +198,12 @@
 </ol>
 <p>If this is understood, then the benefits of functional programming can be cashed in on.</p>
 <h3 id="functionally-pure-reasoning">Functionally pure reasoning</h3>
-<p>Though side-effect are always standing at the end (and often at the beginning) of computational transformations, the complete stretch in-between (usually the major part of the code) can actually be expressed in a purely functional way. If done so, the resulting code checks a mark on each of our core values.</p>
-<p>Programmers can handle pure functions with complete ease of mind. A program that is implemented mostly by pure functions, has a high level of maintainability: Each partial-problem will be a pure function. When reasoning about this program, each of it&rsquo;s parts can be considered completely decoupled from another and save to compose and change. Seen this way expressing a problem solution in a functional way causes a better from of encapsulation, than the OOP-way.</p>
-<p>Taming local state therefore is the activity of expressing as much of a program as possible as a composition of pure functions and use side-effects only when absolutely necessary. Taming local state means complete awareness over all the situations in which state is handled, concise management of it instead of accidental correctness (this it what usually happens when programming OOP under a tight schedule).</p>
+<p>Though side-effects are always standing at the end (and often at the beginning) of computational transformations, the complete stretch in-between (usually the major part of the code) can actually be expressed in a purely functional way. If done so, the resulting code checks a mark on each of our core values.</p>
+<p>Programmers can handle pure functions with complete ease of mind. A program that is implemented mostly by pure functions, has a high level of maintainability: Each partial-solution will be a pure function. When reasoning about this program, each of it&rsquo;s parts can be considered completely decoupled from another and it&rsquo;s save to compose and change. Seen this way expressing a problem solution in a functional way actually poses a better form of encapsulation, than the OOP-way.</p>
+<p>The activity of expressing as much of a program as possible as a composition of pure functions and use side-effects only when absolutely necessary, can therefore be understood as the superior way of taming local state. It means complete awareness over all the situations in which state is handled and concise management of it, instead of accidental correctness (this it what usually happens when programming OOP under a tight schedule).</p>
 <p><strong>Only if local state is tamed, system behavior can be designed concisely and under controlled conditions. Pure functions are the superior tool to do that.</strong></p>
 <h2 id="first-class-functions">First class functions</h2>
-<p>Another building-block of simplification, that affects software-design and -architecture are so called &ldquo;first class functions&rdquo;. What that means is simply that functions can be handled like variables. Most of the programming languages today to support 1st class functions (sometimes called lambdas or delegates). See the following list of OOP design patterns that can be replaced with 1st class functions:</p>
+<p>Another building-block of simplification, that affects software-design and -architecture are so called &ldquo;first class functions&rdquo;. What that means is simply that functions can be handled like variables. Most of the programming languages today do support 1st class functions (sometimes called lambdas or delegates). See the following list of OOP design patterns that can be replaced with 1st class functions:</p>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> Adapter, Wrapper, or Translator</li>
 <li><input checked="" disabled="" type="checkbox"> Bridge</li>
@@ -230,8 +229,8 @@
 <li><input checked="" disabled="" type="checkbox"> Template method</li>
 <li><input checked="" disabled="" type="checkbox"> Visitor</li>
 </ul>
-<p>An implementation using 1st class functions usually reduces the implementation complexity considerably. Universities that teach functional concepts before OOP see that students solve the class of problems (represented by this patterns) almost automatically with 1st class functions, without even being aware of the pattern. Usage of first class functions for the same technical requirements can be so apparent, that no prior knowledge of design patterns is necessary.</p>
-<p>As we can see being aware of the wisdom of functional programming can help us with getting better in pursuing those core values. They help us to reason better about the solutions, to keep it&rsquo;s abstractions simpler and more expressive; thus making programs considerably more resilient to errors.</p>
+<p>An implementation using 1st class functions usually reduces complexity considerably compared to this OOP design patterns. Universities that teach functional concepts before OOP see that students solve the class of problems (solved by OOP design patterns) almost automatically with 1st class functions. Usage of first class functions for this problems can be so apparent, that no prior knowledge of OOP design patterns is necessary.</p>
+<p>As we can see being aware of the wisdom of functional programming helps with getting better in pursuing the core values that make programs better. They help us in reasoning, to keep abstractions simple and more expressive.</p>
 </div>
 
 </main>
