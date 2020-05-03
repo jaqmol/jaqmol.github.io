@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>Better Without Pure OOP</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: #0074D9;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jaqmol.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.69.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Better Without Pure OOP</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/jaqmol/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/username/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Better Without Pure OOP</h2>
+        <h5></h5>
+        
+
+    </div>
+
+    <div align="start" class="content"><h1 id="how-software-is-better-without-oop">How software is better without OOP</h1>
+<p>In the last article the claim was that OOP as a mental model over-complicates reasoning about the technical challenges that have to be faced in programming and software architecture. Object oriented software projects on enterprise level, that had some time to ripen, often end up with an uncanny resemblance to a Rube Goldberg machine, not unlike the one shown in the video below:</p>
+<blockquote>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/XwaH-qT4Rm0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+</blockquote>
+<p>As a quick reminder here are the core values that we need to follow in order to maintain a high quality in how we do software:</p>
+<h3 id="core-values">Core values</h3>
+<ol>
+<li><strong>Expressive problem solving</strong></li>
+<li><strong>Simplicity of abstractions</strong></li>
+<li><strong>Easy reasoning about code</strong></li>
+</ol>
+<p>Object oriented programming and software design doesn&rsquo;t necessarily help with any of those core values. In fact it tends to seduce the practitioner to get into a mindset that over-complicates things. So the before mentioned 3 values can actually be compressed into one:</p>
+<ul>
+<li><strong>Pursuing simplicity</strong></li>
+</ul>
+<h2 id="first-principles">First principles</h2>
+<p>In order to see OOP clearer and extract the good parts, let&rsquo;s revisit it&rsquo;s corner stones with the goal to extract 1st principles from them:</p>
+<h3 id="classes-and-objectsinstances">Classes and objects/instances</h3>
+<p>I mentioned Alan Kay in the previous articles. He invented object-orientation in order to be able to compartmentalize partial problems into (more or less) independent &ldquo;machines&rdquo;, that resemble cells of living organisms. He called them objects and they where supposed to work in conjunction. The first principle to extract from this is a &ldquo;method to structure and order program code&rdquo;. Which is particularly important in the types of data a given program is working on.</p>
+<h3 id="encapsulation">Encapsulation</h3>
+<p>Encapsulation is the process of hiding away details of a partial problem solution. The most important aspect of this is, that the interface behind which the details are hidden, must be considerably easier to reason about. If the result of an encapsulation is harder to reason about, this particular implementation must be considered a failure and should be removed or replaced. So encapsulation is the metaphorical task of putting a problem into a box, put the smallest possible number of levers, buttons and gauges on it and give it a name. Thus encapsulation is perfectly possible without the use of classes and inheritance and therefore without the risk of over-complication.</p>
+<h3 id="composition-inheritance-and-delegation">Composition, inheritance and delegation</h3>
+<p>Fortunately inheritance is considered mostly harmful nowadays. It took the enterprise software community almost 30 years to admit to that and acknowledge the conceptional superiority of composition and delegation. Something that was already clear to the functional programming community in the 1970th.</p>
+<h3 id="local-state">Local State</h3>
+<p>The severity of how problematic state-management actually is, is heavily downplayed by the object oriented community and mostly neglected. To help with understanding that, lets have a closer look at the act of programming itself. Especially object oriented programming. The programmer picks a partial problem and decides to solve it by encapsulating it into a set of variables (data) and methods (transformations). By grouping them together and naming the group, he/she creates an object that handles the problem. The sum of all the variables in an object is referred to as it&rsquo;s &ldquo;local state&rdquo;.</p>
+<p>Let&rsquo;s look at this from an exaggerated perspective to understand what happens in a worst case scenario: Each of this variables expresses a certain condition and all of the conditions together are making up the sum of the complexity of this objects. Let&rsquo;s assume an object has 3 variables where each variable can be in 3 different conditions each. All together the object can be in 27 different states then. An object that has 5 variables where each variable can be in 5 different states, this single object can be in 3125 states.</p>
+<h2 id="conscious-state-management">Conscious State-Management</h2>
+<p>If a programmer is not conscious about the state he implements, his classes and objects can very fast degrade into exponentially raising complexity, where several thousand conditions need to be cared for. And this poses a problem. Exceedingly the programmers job is once more to properly see and understand the causes of complexity in order to make program behavior predictable and be able to consciously procure robustness.</p>
+<p>In fact most of the errors occurring in maintaining and extending software are caused by a lack of understanding of local state: Some encapsulation is parametrized in an unexpected way, which puts the program in a state that was not considered when it was first implemented. If an operating system&rsquo;s programming library doesn&rsquo;t come with robust object-local state in the built-in objects, this will inevitably raise the probability of errors in the applications based on top of it. The metaphorical building on sand &hellip;</p>
+<h2 id="taming-local-state">Taming local state</h2>
+<p><strong>State is the central problem in software architecture and programming. A truth that is heavily downplayed and neglected by the object oriented community.</strong> Which leads to a situation where the value of existing wisdom cannot be assessed adequately.</p>
+<p>Due to the fact that software is about data and transformations over it, state is everywhere and can only be mitigated. Functional programming has a set of intriguing solutions all together with an adequate language to talk about this class of problems:</p>
+<h2 id="side-effects-and-purity">Side effects and purity</h2>
+<p>Instead of attempting to handle the exponential complexity of state by encapsulating problems within more state (OOP), functional programming takes a completely different road:</p>
+<p>1st functional programming identified that state is only problematic if it is mutable; this means if it can be changed. A set of constants poses no risk of raising error-probability. A set of variables does. So the question his: <strong>How can be write our programs in order to be able to treat our variables as constants,</strong> in order to prevent mutable state. <strong>This is achieved by doing as much as possible with functions only.</strong> A free-floating function that is not connected to an object and does not alter any state outside of itself has very interesting characteristics:</p>
+<ul>
+<li>It&rsquo;s behaving 100% predictable: given the same input it will always produce the same output (same arguments -&gt; same return value).</li>
+<li>It&rsquo;s 100% safe: it will not mutate anything outside of it&rsquo;s scope.</li>
+<li>It&rsquo;s correctness is provable (if necessary).</li>
+<li>It&rsquo;s extremely well and easy testable (compared to OOP).</li>
+<li>It&rsquo;s very easy to maintain and extend due to the precise scope of the &ldquo;encapsulated&rdquo; code.</li>
+<li>A function that only uses pure functions and doesn&rsquo;t mutate anything outside of it&rsquo;s scope, is itself pure.</li>
+</ul>
+<p>This class of functions is called <strong>pure</strong>. The act of combining pure functions is called <strong>function-composition</strong>.</p>
+<h3 id="pure-functions">Pure functions:</h3>
+<ol>
+<li><strong>&hellip; are an expressive tool to solve problems</strong></li>
+<li><strong>&hellip; lead to simple abstractions</strong></li>
+<li><strong>&hellip; are extremely easy to reason about</strong></li>
+</ol>
+<p>If a function does more than transforming a given input into an output, it&rsquo;s not considered pure anymore. A setter-method on an object for instance is not pure, because it changes the state of the object. Such a function is considered as having one or more side-effects. When called a second time with the same arguments, the outcome of this call might be completely different. This kind of code is therefore less predictable than a pure function. Code not written as pure functions poses the risk of raising error-probability.</p>
+<p>IT IS ABSOLUTELY POSSIBLE TO WRITE THE MAJOR PART OF THE CODE OF AN APPLICATION AS PURE FUNCTIONS.</p>
+<h3 id="side-effects-are-always-the-outcome">Side-effects are always the outcome</h3>
+<p>Computing is all about data and the transformation of data. One could express this as a stream of transformations that can be expressed perfectly in a functional paradigm. But in order to actually do something with the results, side-effects are absolutely necessary. If the result of a computation is displayed to a screen, send over the network or written to a hard drive, this is always a side-effect.</p>
+<p>This fact can easily be misunderstand as a weakness of functional programming. In fact the object oriented community tapped into this trap: If side-effects are the most important thing, let&rsquo;s program everything as side-effect. Programming with setters and getters is exactly this: Programming by side-effects.</p>
+<p>But are side-effects really the most important thing? I&rsquo;d argue: Most definitely not! The most important aspect in programming is to keep the major part of the code:</p>
+<ol>
+<li><strong>Expressive in the way it solves problems</strong></li>
+<li><strong>Simple in it&rsquo;s abstractions</strong></li>
+<li><strong>As easy to reason about as possible</strong></li>
+</ol>
+<p>If this is understood, then the benefits of functional programming can be cashed in on.</p>
+<h3 id="functionally-pure-reasoning">Functionally pure reasoning</h3>
+<p>Though side-effect are always standing at the end (and often at the beginning) of computational transformations, the complete stretch in-between (usually the major part of the code) can actually be expressed in a purely functional way. If done so, the resulting code checks a mark on each of our core values.</p>
+<p>Programmers can handle pure functions with complete ease of mind. A program that is implemented mostly by pure functions, has a high level of maintainability: Each partial-problem will be a pure function. When reasoning about this program, each of it&rsquo;s parts can be considered completely decoupled from another and save to compose and change. Seen this way expressing a problem solution in a functional way causes a better from of encapsulation, than the OOP-way.</p>
+<p>Taming local state therefore is the activity of expressing as much of a program as possible as a composition of pure functions and use side-effects only when absolutely necessary. Taming local state means complete awareness over all the situations in which state is handled, concise management of it instead of accidental correctness (this it what usually happens when programming OOP under a tight schedule).</p>
+<p><strong>Only if local state is tamed, system behavior can be designed concisely and under controlled conditions. Pure functions are the superior tool to do that.</strong></p>
+<h2 id="first-class-functions">First class functions</h2>
+<p>Another building-block of simplification, that affects software-design and -architecture are so called &ldquo;first class functions&rdquo;. What that means is simply that functions can be handled like variables. Most of the programming languages today to support 1st class functions (sometimes called lambdas or delegates). See the following list of OOP design patterns that can be replaced with 1st class functions:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Adapter, Wrapper, or Translator</li>
+<li><input checked="" disabled="" type="checkbox"> Bridge</li>
+<li><input checked="" disabled="" type="checkbox"> Composite</li>
+<li><input checked="" disabled="" type="checkbox"> Decorator</li>
+<li><input checked="" disabled="" type="checkbox"> Extension object</li>
+<li><input checked="" disabled="" type="checkbox"> Facade</li>
+<li><input checked="" disabled="" type="checkbox"> Flyweight</li>
+<li><input checked="" disabled="" type="checkbox"> Front controller</li>
+<li><input checked="" disabled="" type="checkbox"> Proxy</li>
+<li><input checked="" disabled="" type="checkbox"> Chain of responsibility</li>
+<li><input checked="" disabled="" type="checkbox"> Command</li>
+<li><input checked="" disabled="" type="checkbox"> Interpreter</li>
+<li><input checked="" disabled="" type="checkbox"> Iterator</li>
+<li><input checked="" disabled="" type="checkbox"> Mediator</li>
+<li><input checked="" disabled="" type="checkbox"> Memento</li>
+<li><input checked="" disabled="" type="checkbox"> Null object</li>
+<li><input checked="" disabled="" type="checkbox"> Observer or Publish/subscribe</li>
+<li><input checked="" disabled="" type="checkbox"> Servant</li>
+<li><input checked="" disabled="" type="checkbox"> Specification</li>
+<li><input checked="" disabled="" type="checkbox"> State</li>
+<li><input checked="" disabled="" type="checkbox"> Strategy</li>
+<li><input checked="" disabled="" type="checkbox"> Template method</li>
+<li><input checked="" disabled="" type="checkbox"> Visitor</li>
+</ul>
+<p>An implementation using 1st class functions usually reduces the implementation complexity considerably. Universities that teach functional concepts before OOP see that students solve the class of problems (represented by this patterns) almost automatically with 1st class functions, without even being aware of the pattern. Usage of first class functions for the same technical requirements can be so apparent, that no prior knowledge of design patterns is necessary.</p>
+<p>As we can see being aware of the wisdom of functional programming can help us with getting better in pursuing those core values. They help us to reason better about the solutions, to keep it&rsquo;s abstractions simpler and more expressive; thus making programs considerably more resilient to errors.</p>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a>.</p>
+        </footer>
+
+        
+
+
+    </body>
+
+</html>
+

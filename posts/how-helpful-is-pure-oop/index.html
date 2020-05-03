@@ -62,7 +62,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.67.1" />
+ <meta name="generator" content="Hugo 0.69.0" />
         
 
         
@@ -175,9 +175,9 @@
 </ul>
 <p>Alan Kay in a response to a question from Stefan Ram <a href="https://www.quora.com/What-does-Alan-Kay-consider-as-real-OOP">Source: Re: Clarification of &ldquo;object-oriented&rdquo;</a></p>
 </blockquote>
-<p>To get rid of data was the honorable goal. What classes and objects actually turned out to be used for mainly, was to construct data type hierarchies. Those turn every kind of problem into a tree of interdependent, nested data types. So instead of getting rid of data, classes and objects turn everything into a problem of hierarchically structuring data. Usually in a way that is not accommodating data transformation because the object oriented mental model does not put the practitioners in a place where they&rsquo;re empowered to do so.</p>
-<p>So what is actually required is the transformation of data and the appropriate representation of data to effectively apply those transformations. Inheritance enforces a mental model where most of the time is spent pressing data into arbitrary hierarchies, merging the data completely arbitrarily with transformations. OOP additionally complicates expressing processes, because the notion of a process that has a clearly designed beginning state and a clearly designed end state, not to mention preliminary states in between, causes an explosion of required effort: Built on top of OOP it is magnitudes more complex than under a non-OOP mental model.</p>
-<p>Unfortunately it must be stated that the OOP mental model causes a huge overhead of mental exercise that is mostly unnecessary to solve the inherent technical problems of data transformation. For practitioners of object orientation and especially inheritance, what should be the main concern therefore is actually taking a back seat.</p>
+<p>To get rid of data was the honorable goal. What classes and objects actually turned out to be used for mainly, was to construct data type hierarchies. Those turn every kind of problem into a tree of interdependent, nested data types. So instead of getting rid of data, classes and objects turn everything into a problem of hierarchically structuring data. Usually in a way that is not accommodating data transformation because the object oriented mental model does not put the practitioners into a mental place where they&rsquo;re specially well equipped to do so.</p>
+<p>So what is actually required is the transformation of data and the appropriate representation of data to effectively apply those transformations. Inheritance enforces a mental model where most of the time is spent pressing data into arbitrary hierarchies and merging it quite arbitrarily with transformations. OOP additionally complicates expressing processes, because the notion of a process that has a clearly designed beginning state and a clearly designed end state, not to mention preliminary states in between, causes an explosion of required effort: Built on top of OOP this kind of thing becomes magnitudes more complex to build, maintain and reason about than under a non-OOP mental model.</p>
+<p>Coming back to Alan Kays honorable goal and re-evaluating what we achieved with OOP over the decades, we should be honest and conclude, that the promises where not met: We cannot get rid of data. We cannot lift our reasoning-space above actual existing problems as long as computing power remains restricted by power efficiency. That the OOP mental model poses a huge overhead of mental exercise that is mostly unnecessary to solve the inherent technical problems of data transformation. For practitioners of object orientation, what should be the main concern, therefore is actually taking a back seat.</p>
 <p>This path astray is further intensified by one aspect of this mental model which is called <a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">&ldquo;The kingdom of nouns&rdquo;</a>. It encourages to think about the problem by objectifying everything.</p>
 <p><strong>Being forced to skew the solution finding process by building over-complicated data hierarchies and objectifying everything, does not make it more expressive. It actually encumbers transformation-focused reasoning about the problem.</strong></p>
 <h2 id="software-design-patterns">Software design patterns</h2>
@@ -220,6 +220,15 @@
 </ol>
 <p>There has never been evidence that object orientation adds something in those fields in comparison to the alternatives. Pure object orientation turned out to be a factor for over-complication of software systems, proven countless times over the last decades. In fact if object orientation as a hard design goal is given up, expressiveness of problem solving, simplicity of abstractions as well as the ease to reason about code raises considerable. That contrary evidence should be enough to recognize &ldquo;pure object orientation&rdquo; as what actually became of it:</p>
 <p><strong>OOP IS A DOGMA</strong></p>
+<h2 id="oop-leads-to-rube-goldberg-machines">OOP leads to Rube Goldberg machines</h2>
+<p>If you don&rsquo;t know what a Rube Goldberg machine ist, here&rsquo;s what Wikipedia is saying about it, plus an example:</p>
+<blockquote>
+<p>A Rube Goldberg machine, named after American cartoonist Rube Goldberg, is a machine intentionally designed to perform a simple task in an indirect and overly complicated way. Usually, these machines consist of a series of simple unrelated devices; the action of each triggers the initiation of the next, eventually resulting in achieving a stated goal.</p>
+<p><img src="/images/Rube_Goldberg's_%22Self-Operating_Napkin%22_(cropped).gif" alt="Professor Butts and the Self-Operating Napkin (1931)" title="Professor Butts and the Self-Operating Napkin (1931)"></p>
+<p>Professor Butts and the Self-Operating Napkin (1931). Soup spoon (A) is raised to mouth, pulling string (B) and thereby jerking ladle (C), which throws cracker (D) past toucan (E). Toucan jumps after cracker and perch (F) tilts, upsetting seeds (G) into pail (H). Extra weight in pail pulls cord (I), which opens and ignites lighter (J), setting off skyrocket (K), which causes sickle (L) to cut string (M), allowing pendulum with attached napkin to swing back and forth, thereby wiping chin.</p>
+<p><a href="https://en.m.wikipedia.org/wiki/Rube_Goldberg_machine">Rube Goldberg machine @ Wikipedia</a></p>
+</blockquote>
+<p>Often the first impression a software programmer or architect has, when joining in on an existing object oriented project, is somewhat funny. Especially when it&rsquo;s a big project the resemblance to a Rube Goldberg machine is usually quite uncanny.</p>
 <p><strong>In the next article I want to show which kind of concepts can be used to actively invest in simplicity by not doing everything in an object oriented way.</strong></p>
 </div>
 

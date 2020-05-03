@@ -6,10 +6,20 @@
     <description>Recent content in Posts on ronrei.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2020 16:50:28 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 12:58:35 +0200</lastBuildDate>
     
 	<atom:link href="https://jaqmol.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Better Without Pure OOP</title>
+      <link>https://jaqmol.github.io/posts/better-without-pure-oop/</link>
+      <pubDate>Sun, 03 May 2020 12:58:35 +0200</pubDate>
+      
+      <guid>https://jaqmol.github.io/posts/better-without-pure-oop/</guid>
+      <description>How software is better without OOP In the last article the claim was that OOP as a mental model over-complicates reasoning about the technical challenges that have to be faced in programming and software architecture. Object oriented software projects on enterprise level, that had some time to ripen, often end up with an uncanny resemblance to a Rube Goldberg machine, not unlike the one shown in the video below:
+    As a quick reminder here are the core values that we need to follow in order to maintain a high quality in how we do software:</description>
+    </item>
     
     <item>
       <title>How helpful is pure OOP?</title>
