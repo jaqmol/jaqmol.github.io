@@ -151,6 +151,28 @@
 <ul>
 <li><strong>Pursuing simplicity</strong></li>
 </ul>
+<h2 id="domain-driven-design">Domain-Driven Design</h2>
+<p>In his 2003 book &ldquo;Domain-driven design&rdquo; Eric Evans makes the point, that in order to keep a large object-oriented system maintainable (keep it easy to extend and fix) they should be designed paying attention to the following categories of objects/classes; all objects/classes should fall in one of them:</p>
+<table>
+<thead>
+<tr>
+<th>Data Objects</th>
+<th>Behavior Objects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entities</td>
+<td>Services</td>
+</tr>
+<tr>
+<td>Value Objects</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This is not what is taught in the traditional school of object-oriented design and programming. Not by any stretch of the imagination. In pure OOP, every kind of object/class comes with it&rsquo;s own set of behavior. This is how traditional encapsulated demands it.</p>
+<p>I should not forget to mention that Eric Evans wasn&rsquo;t the only one (nor the first one) that came to this conclusion. His statements are definitely based on real-world problems and a lot of experience in solving them. In order to understand what this categorization actually means, we need to start with some ground-work.</p>
 <h2 id="first-principles">First principles</h2>
 <p>In order to see OOP clearer and extract the good parts, let&rsquo;s revisit it&rsquo;s corner stones with the goal to extract 1st principles from them:</p>
 <h3 id="classes-and-objectsinstances">Classes and objects/instances</h3>
@@ -230,7 +252,42 @@
 <li><input checked="" disabled="" type="checkbox"> Visitor</li>
 </ul>
 <p>An implementation using 1st class functions usually reduces complexity considerably compared to this OOP design patterns. Universities that teach functional concepts before OOP see that students solve the class of problems (solved by OOP design patterns) almost automatically with 1st class functions. Usage of first class functions for this problems can be so apparent, that no prior knowledge of OOP design patterns is necessary.</p>
-<p>As we can see being aware of the wisdom of functional programming helps with getting better in pursuing the core values that make programs better. They help us in reasoning, to keep abstractions simple and more expressive.</p>
+<h2 id="classifying-domain-driven-design">Classifying Domain-Driven Design</h2>
+<p>As we can see being aware of the wisdom of functional programming helps with getting better in pursuing the core values that make programs better. They help us in reasoning, to keep abstractions simple and more expressive. Now lets revisit Eric Evans&rsquo; Domain-driven design from the perspective of data and transformations upon it:</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entities</td>
+<td>Services</td>
+</tr>
+<tr>
+<td>Value Objects</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Entities and value objects represent the classes of data a system operates upon. Entities represent the business domain the system is built for. Value objects are carrier objects, to transport data between services. Services represent the transformations that are applied to entities and value objects. Services are therefore the extracted behavior, that should actually be part of the domain objects themselves if we stick to the traditional school of object oriented analysis and design.</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data types</td>
+<td>Functions</td>
+</tr>
+</tbody>
+</table>
+<p>If we look closer, we recognize that Eric Evans arrived at the same point like the practitioners of functional programming. By pure necessity caused by real world problems and experience.</p>
 </div>
 
 </main>
